@@ -1,0 +1,16 @@
+List all customer names in decreasing order of the TOTAL loan amounts. Print the loan amounts also.
+
+select name, sum(amount) from customer , borrower, loan where customer.c_id = borrower.cust_id and borrower.loan_no = loan.ln_no group by customer.c_id order by sum(amount) desc;
++----------+-------------+
+| name     | sum(amount) |
++----------+-------------+
+| sachitra |    22000000 |
+| haritha  |     7000000 |
+| shankar  |     4000000 |
+| saritha  |     4000000 |
+| himani   |     2500000 |
+| ramu     |     1000000 |
+| yogitha  |      500000 |
+| radhika  |      500000 |
++----------+-------------+
+8 rows in set (0.01 sec)
