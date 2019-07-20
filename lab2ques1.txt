@@ -1,0 +1,3 @@
+List all cities that have atleast the “fixeddeposit” facility in the lexicographic order.
+
+select distinct branch.city from branch inner join assets on branch.brn_name = assets.br_name where facilities = "fixeddeposit" order by branch.city;
