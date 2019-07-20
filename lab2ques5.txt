@@ -1,0 +1,10 @@
+Display customer names of whose any loan has been payed more than once.
+
+select customer.name from customer, (select cust_id from borrower ,  (select count(l_no) as cnt , l_no from payment group by l_no) as t1 where t1.cnt>1 and borrower.loan_no = l_no) as t2 where customer.c_id = cust_id;
++---------+
+| name    |
++---------+
+| haritha |
+| himani  |
++---------+
+2 rows in set (0.00 sec)
