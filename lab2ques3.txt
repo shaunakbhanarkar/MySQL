@@ -1,0 +1,3 @@
+List the first two account numbers when arranged in ascending order when the accounts have been accessed on either the 1st or 12th day of the month.
+
+select distinct ac_no from depositor where access_dt like '%12' or access_dt like '%01' order by ac_no limit 2;
