@@ -7,16 +7,28 @@ Once you’ve done this, download the bank.sql file (available on moodle) to you
 mysql> source bank.sql
 
 show tables;
+
 +----------------+
+
 | Tables_in_bank |
+
 +----------------+
+
 | ACCOUNT        |
+
 | ASSETS         |
+
 | BORROWER       |
+
 | BRANCH         |
+
 | CUSTOMER       |
+
 | DEPOSITOR      |
+
 | LOAN           |
+
 | PAYMENT        |
+
 +----------------+
 
