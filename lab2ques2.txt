@@ -1,0 +1,22 @@
+List all customer names in decreasing order of their loan amounts. If a person has taken more than one loans, then display all their loans.
+
+select customer.name, loan.amount from customer, borrower, loan where customer.c_id = borrower.cust_id and borrower.loan_no = loan.ln_no order by loan.amount desc;
++----------+---------+
+| name     | amount  |
++----------+---------+
+| sachitra | 8000000 |
+| sachitra | 8000000 |
+| sachitra | 6000000 |
+| haritha  | 6000000 |
+| saritha  | 4000000 |
+| shankar  | 4000000 |
+| himani   | 2000000 |
+| haritha  |  500000 |
+| haritha  |  500000 |
+| yogitha  |  500000 |
+| himani   |  500000 |
+| radhika  |  500000 |
+| ramu     |  500000 |
+| ramu     |  500000 |
++----------+---------+
+14 rows in set (0.00 sec)
